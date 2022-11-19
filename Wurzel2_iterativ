@@ -1,0 +1,27 @@
+program WurzelZwei (input, output);
+{ naehert sich dem Wert Wurzel 2 }
+
+  type
+  tNatZahl = 1..maxint;
+  
+  var
+  i,
+  n : tNatZahl;
+  a,
+  e,
+  p,
+  zw : real;
+  
+begin
+  e := 1;
+  a := 1;
+  readln(n);
+  for i := 1 to n do
+  begin
+    p := e/a;
+    writeln(p);
+    zw := a;
+    a := a + e;
+    e := a + zw;
+  end;
+end. { WurzelZwei }
